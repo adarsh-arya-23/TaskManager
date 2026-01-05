@@ -18,13 +18,24 @@ import {
     Heart,
     Zap,
     Shield,
-    Trash2
+    Trash2,
+    // Additional icons for custom habits
+    Activity, Bike, Footprints, Salad, Pill, Stethoscope, Weight, Smile, Brain,
+    GraduationCap, BookOpen, Lightbulb, Languages, Calculator, Microscope, Pencil, FileText,
+    Briefcase, Coffee, Laptop, CheckSquare, Calendar, TrendingUp, BarChart, Rocket,
+    Music, Camera, Palette, Gamepad2, Plane, ShoppingBag, Gift, Star,
+    Sun, Cloud, Leaf, Flower2, Trees, Mountain, Waves, Wind,
+    Brush, Film, Mic, Radio, Scissors, Pen, Image, Video,
+    Sparkle, CloudRain, Eye, Ear, Hand, Users, MessageCircle, Phone,
+    Utensils, CupSoda, Pizza, Soup, Cookie, Carrot,
+    Award, Medal, Flag, Bell, Timer, Hourglass, CircleDot
 } from 'lucide-react';
 import CreateHabitModal from '../components/CreateHabitModal';
 import MotivationalMessage from '../components/MotivationalMessage';
 import ThemeToggle from '../components/ThemeToggle';
 
 const iconMap: Record<string, any> = {
+    // Original templates
     dumbbell: Dumbbell,
     book: Book,
     code: Code,
@@ -33,6 +44,88 @@ const iconMap: Record<string, any> = {
     moon: Moon,
     heart: Heart,
     zap: Zap,
+    // Fitness & Health
+    activity: Activity,
+    bike: Bike,
+    footprints: Footprints,
+    flame: Flame,
+    salad: Salad,
+    pill: Pill,
+    stethoscope: Stethoscope,
+    weight: Weight,
+    smile: Smile,
+    brain: Brain,
+    // Learning & Education
+    bookopen: BookOpen,
+    graduationcap: GraduationCap,
+    lightbulb: Lightbulb,
+    languages: Languages,
+    calculator: Calculator,
+    microscope: Microscope,
+    pencil: Pencil,
+    filetext: FileText,
+    // Productivity & Work
+    briefcase: Briefcase,
+    coffee: Coffee,
+    laptop: Laptop,
+    checksquare: CheckSquare,
+    calendar: Calendar,
+    trendingup: TrendingUp,
+    barchart: BarChart,
+    rocket: Rocket,
+    target: Target,
+    // Food & Nutrition
+    utensils: Utensils,
+    cupsoda: CupSoda,
+    pizza: Pizza,
+    soup: Soup,
+    cookie: Cookie,
+    carrot: Carrot,
+    // Lifestyle & Hobbies
+    music: Music,
+    camera: Camera,
+    palette: Palette,
+    gamepad2: Gamepad2,
+    plane: Plane,
+    shoppingbag: ShoppingBag,
+    gift: Gift,
+    star: Star,
+    // Nature & Outdoors
+    sun: Sun,
+    cloud: Cloud,
+    leaf: Leaf,
+    flower2: Flower2,
+    trees: Trees,
+    mountain: Mountain,
+    waves: Waves,
+    wind: Wind,
+    // Creative & Arts
+    brush: Brush,
+    film: Film,
+    mic: Mic,
+    radio: Radio,
+    scissors: Scissors,
+    pen: Pen,
+    image: Image,
+    video: Video,
+    // Mindfulness & Social
+    sparkle: Sparkle,
+    cloudrain: CloudRain,
+    eye: Eye,
+    ear: Ear,
+    hand: Hand,
+    users: Users,
+    messagecircle: MessageCircle,
+    phone: Phone,
+    // Goals & Achievements
+    trophy: Trophy,
+    award: Award,
+    medal: Medal,
+    flag: Flag,
+    bell: Bell,
+    timer: Timer,
+    hourglass: Hourglass,
+    circledot: CircleDot,
 };
 
 export default function Dashboard() {
