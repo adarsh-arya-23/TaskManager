@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { Mail, Lock, User, AlertCircle, ArrowRight } from 'lucide-react';
-import ThemeToggle from '../components/ThemeToggle';
+import AuthLayout from '../components/AuthLayout';
 
 export default function Signup() {
     const [username, setUsername] = useState('');
@@ -13,6 +13,8 @@ export default function Signup() {
     const [loading, setLoading] = useState(false);
     const { signup } = useAuth();
     const navigate = useNavigate();
+
+
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -41,15 +43,8 @@ export default function Signup() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-4">
-            <ThemeToggle floating />
-            {/* Background Glows */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
-                <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
-            </div>
-
-            <div className="w-full max-w-5xl flex flex-col md:flex-row-reverse glass-card overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border-white/10 group relative z-10">
+        <AuthLayout animationKey="signup">
+            <div className="flex flex-col md:flex-row-reverse glass-card overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border-white/10 group">
                 {/* Left Side (Actually Right here for contrast): Animation (Hero) */}
                 <div className="hidden md:flex md:w-1/2 bg-white flex-col justify-center items-center p-12 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-white pointer-events-none"></div>
@@ -187,6 +182,6 @@ export default function Signup() {
                     </div>
                 </div>
             </div>
-        </div>
+        </AuthLayout>
     );
 }

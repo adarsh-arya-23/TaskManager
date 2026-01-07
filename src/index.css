@@ -21,19 +21,19 @@
 }
 
 [data-theme='light'] {
-    --bg-primary-gradient: linear-gradient(to bottom right, #f8fafc, #f3e8ff, #f8fafc);
-    --text-primary: #1e293b;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --card-bg: rgba(255, 255, 255, 0.7);
-    --card-border: rgba(147, 51, 234, 0.1);
-    --card-hover-bg: rgba(255, 255, 255, 0.9);
-    --input-bg: #ffffff;
-    --btn-secondary-bg: rgba(147, 51, 234, 0.05);
-    --btn-secondary-hover: rgba(147, 51, 234, 0.1);
-    --scrollbar-track: #f1f5f9;
+    --bg-primary-gradient: linear-gradient(to bottom right, #e2e8f0, #ddd6fe, #e2e8f0);
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --card-bg: rgba(248, 250, 252, 0.95);
+    --card-border: rgba(71, 85, 105, 0.2);
+    --card-hover-bg: rgba(241, 245, 249, 1);
+    --input-bg: #f8fafc;
+    --btn-secondary-bg: rgba(100, 116, 139, 0.1);
+    --btn-secondary-hover: rgba(100, 116, 139, 0.2);
+    --scrollbar-track: #cbd5e1;
     --glass-blur: 8px;
-    --shadow-color: rgba(147, 51, 234, 0.1);
+    --shadow-color: rgba(15, 23, 42, 0.15);
 }
 
 @layer base {
@@ -187,4 +187,34 @@
 
 .animate-float {
     animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

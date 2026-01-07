@@ -139,6 +139,8 @@ export default function Dashboard() {
         fetchHabits();
     }, []);
 
+
+
     const fetchHabits = async () => {
         try {
             const response = await api.get<Habit[]>('/habits');
